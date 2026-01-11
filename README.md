@@ -1,105 +1,77 @@
 
 <head>
-    <meta charset="UTF-8">
-    <title>Gecko Store</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+<meta charset="UTF-8">
+<title>Gecko Store</title>
 
-        .container {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            padding: 40px;
-            box-sizing: border-box;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-        .image-left {
-            position: absolute;
-            left: 40px;
-            top: 80px;
-            width: 300px;
-        }
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+}
 
-        .image-right {
-            position: absolute;
-            right: 40px;
-            top: 80px;
-            width: 300px;
-        }
+.product {
+    position: absolute;
+    width: 300px;
+}
 
-        .image-bottom {
-            position: absolute;
-            left: 50%;
-            bottom: 120px;
-            transform: translateX(-50%);
-            width: 320px;
-        }
+.left { left: 40px; top: 80px; }
+.right { right: 40px; top: 80px; }
+.bottom { left: 50%; bottom: 120px; transform: translateX(-50%); }
 
-        a img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
+.product img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
 
-        a img:hover {
-            transform: scale(1.05);
-        }
+.product img:hover {
+    transform: scale(1.05);
+}
+</style>
 
-        .order-button {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 30px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 30px;
-        }
+<script>
+function orderProduct(productName, imageUrl) {
+    const phone = "6285655002016";
+    const message =
+        `Saya mau beli produk: ${productName}%0A` +
+        `Gambar produk:%0A${imageUrl}`;
 
-        .order-button:hover {
-            background-color: #1ebe5d;
-        }
-    </style>
+    const waUrl = `https://wa.me/${phone}?text=${message}`;
+    window.open(waUrl, "_blank");
+}
+</script>
 </head>
+
 <body>
 
 <div class="container">
 
-    <div class="image-left">
-        <a href="https://wa.me/6285655002016?text=saya%20mau%20order%20min" target="_blank">
-            <img src="blizz..jpeg" alt="Gecko Kiri">
-        </a>
+    <div class="product left">
+        <img src="blizz.jpeg"
+             onclick="orderProduct('Blizzard Gecko', 'https://yourdomain.com/blizz.jpeg')">
     </div>
 
-    <div class="image-right">
-        <a href="https://wa.me/6285655002016?text=saya%20mau%20order%20min" target="_blank">
-            <img src="mack.jpeg" alt="Gecko Kanan">
-        </a>
+    <div class="product right">
+        <img src="mack.jpeg"
+             onclick="orderProduct('Mack Snow Gecko', 'https://yourdomain.com/mack.jpeg')">
     </div>
 
-    <div class="image-bottom">
-        <a href="https://wa.me/6285655002016?text=saya%20mau%20order%20min" target="_blank">
-            <img src="tremper.jpeg" alt="Gecko Bawah">
-        </a>
+    <div class="product bottom">
+        <img src="tremper.jpeg"
+             onclick="orderProduct('Tremper Albino Gecko', 'https://yourdomain.com/tremper.jpeg')">
     </div>
-
-    <a 
-        class="order-button" 
-        href="https://wa.me/6285655002016?text=saya%20mau%20order%20min"
-        target="_blank">
-        Order via WhatsApp
-    </a>
 
 </div>
 
 </body>
-
