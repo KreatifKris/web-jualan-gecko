@@ -1,4 +1,5 @@
 
+
 <head>
     <meta charset="UTF-8">
     <title>Gecko Store</title>
@@ -34,7 +35,7 @@
 
         .product-card img {
             width: 100%;
-            height: auto;
+            display: block;
         }
 
         .product-info {
@@ -70,7 +71,7 @@
 
 <body>
 
-<h1>🦎 Gecko Store</h1>
+<h1>Gecko Store</h1>
 
 <div class="container">
 
@@ -80,10 +81,9 @@
         <div class="product-info">
             <h2>Gecko Blizzard</h2>
             <div class="price">Rp 1.500.000</div>
-            <a 
-                class="buy-button"
-                href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Blizzard%0AHarga:%20Rp%201.500.000%0ALink%20gambar:%20https://yourdomain.com/blizz.jpeg"
-                target="_blank">
+            <a class="buy-button"
+               href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Blizzard"
+               target="_blank">
                 Buy via WhatsApp
             </a>
         </div>
@@ -95,10 +95,9 @@
         <div class="product-info">
             <h2>Gecko Mack Snow</h2>
             <div class="price">Rp 1.200.000</div>
-            <a 
-                class="buy-button"
-                href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Mack%20Snow%0AHarga:%20Rp%201.200.000%0ALink%20gambar:%20https://yourdomain.com/mack.jpeg"
-                target="_blank">
+            <a class="buy-button"
+               href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Mack%20Snow"
+               target="_blank">
                 Buy via WhatsApp
             </a>
         </div>
@@ -110,10 +109,9 @@
         <div class="product-info">
             <h2>Gecko Tremper Albino</h2>
             <div class="price">Rp 1.800.000</div>
-            <a 
-                class="buy-button"
-                href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Tremper%20Albino%0AHarga:%20Rp%201.800.000%0ALink%20gambar:%20https://yourdomain.com/tremper.jpeg"
-                target="_blank">
+            <a class="buy-button"
+               href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Tremper%20Albino"
+               target="_blank">
                 Buy via WhatsApp
             </a>
         </div>
@@ -122,3 +120,4 @@
 </div>
 
 </body>
+
