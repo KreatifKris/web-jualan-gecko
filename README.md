@@ -1,75 +1,122 @@
 
 <head>
-<meta charset="UTF-8">
-<title>Gecko Store</title>
+    <meta charset="UTF-8">
+    <title>Gecko Store</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-.container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    padding: 40px;
-    box-sizing: border-box;
-}
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
 
-.product {
-    position: absolute;
-    width: 300px;
-}
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
 
-.left { left: 40px; top: 80px; }
-.right { right: 40px; top: 80px; }
-.bottom { left: 50%; bottom: 120px; transform: translateX(-50%); }
+        .product-card {
+            background: white;
+            width: 300px;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            overflow: hidden;
+            text-align: center;
+        }
 
-.product img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: transform 0.3s;
-}
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
 
-.product img:hover {
-    transform: scale(1.05);
-}
-</style>
+        .product-info {
+            padding: 15px;
+        }
 
-<script>
-function orderProduct(productName, imageUrl) {
-    const phone = "6285655002016";
-    const message =
-        `Saya mau beli produk: ${productName}%0A` +
-        `Gambar produk:%0A${imageUrl}`;
+        .product-info h2 {
+            margin: 10px 0 5px;
+        }
 
-    const waUrl = `https://wa.me/${phone}?text=${message}`;
-    window.open(waUrl, "_blank");
-}
-</script>
+        .price {
+            color: #e67e22;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .buy-button:hover {
+            background-color: #1ebe5d;
+        }
+    </style>
 </head>
 
 <body>
 
+<h1>🦎 Gecko Store</h1>
+
 <div class="container">
 
-    <div class="product left">
-        <img src="blizz.jpeg"
-             onclick="orderProduct('Blizzard Gecko', 'https://yourdomain.com/blizz.jpeg')">
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+        <img src="blizz.jpeg" alt="Gecko Blizzard">
+        <div class="product-info">
+            <h2>Gecko Blizzard</h2>
+            <div class="price">Rp 1.500.000</div>
+            <a 
+                class="buy-button"
+                href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Blizzard%0AHarga:%20Rp%201.500.000%0ALink%20gambar:%20https://yourdomain.com/blizz.jpeg"
+                target="_blank">
+                Buy via WhatsApp
+            </a>
+        </div>
     </div>
 
-    <div class="product right">
-        <img src="mack.jpeg"
-             onclick="orderProduct('Mack Snow Gecko', 'https://yourdomain.com/mack.jpeg')">
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+        <img src="mack.jpeg" alt="Gecko Mack Snow">
+        <div class="product-info">
+            <h2>Gecko Mack Snow</h2>
+            <div class="price">Rp 1.200.000</div>
+            <a 
+                class="buy-button"
+                href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Mack%20Snow%0AHarga:%20Rp%201.200.000%0ALink%20gambar:%20https://yourdomain.com/mack.jpeg"
+                target="_blank">
+                Buy via WhatsApp
+            </a>
+        </div>
     </div>
 
-    <div class="product bottom">
-        <img src="tremper.jpeg"
-             onclick="orderProduct('Tremper Albino Gecko', 'https://yourdomain.com/tremper.jpeg')">
+    <!-- PRODUCT 3 -->
+    <div class="product-card">
+        <img src="tremper.jpeg" alt="Gecko Tremper Albino">
+        <div class="product-info">
+            <h2>Gecko Tremper Albino</h2>
+            <div class="price">Rp 1.800.000</div>
+            <a 
+                class="buy-button"
+                href="https://wa.me/6285655002016?text=Saya%20mau%20beli%20Gecko%20Tremper%20Albino%0AHarga:%20Rp%201.800.000%0ALink%20gambar:%20https://yourdomain.com/tremper.jpeg"
+                target="_blank">
+                Buy via WhatsApp
+            </a>
+        </div>
     </div>
 
 </div>
