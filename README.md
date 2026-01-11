@@ -77,7 +77,7 @@
 
     <!-- PRODUCT 1 -->
     <div class="product-card">
-        <img src="blizz.jpeg" alt="Gecko Blizzard">
+        <img src="blizz..jpeg" alt="Gecko Blizzard">
         <div class="product-info">
             <h2>Gecko Blizzard</h2>
             <div class="price">Rp 1.500.000</div>
